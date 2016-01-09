@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D4B81FEB-B64B-416E-8473-07591EDEC8FB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>鑽礦遊戲2</RootNamespace>
+    <AssemblyName>鑽礦遊戲2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>2.2.10.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>..\My Rules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2902.0\Microsoft.DirectX.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.AudioVideoPlayback, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2902.0\Microsoft.DirectX.AudioVideoPlayback.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.DirectSound, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2902.0\Microsoft.DirectX.DirectSound.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio, Version=1.5.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.WindowsMediaFormat, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\NAudio.WindowsMediaFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AI_Controler.cs" />
+    <Compile Include="Altimeter.cs" />
+    <Compile Include="Game Frame\Arrow.cs" />
+    <Compile Include="Game Frame\Sky Frame\Earth.cs" />
+    <Compile Include="Game Frame\Sky Frame\Jupitor.cs" />
+    <Compile Include="Game Frame\Sky Frame\Mars.cs" />
+    <Compile Include="Game Frame\Sky Frame\Neptune.cs" />
+    <Compile Include="Game Frame\Sky Frame\Pluto.cs" />
+    <Compile Include="Game Frame\Sky Frame\Saturn.cs" />
+    <Compile Include="Game Frame\Sky Frame\Uranus.cs" />
+    <Compile Include="Game Frame\Sky Frame\Venus.cs" />
+    <Compile Include="Game Frame\Sky Frame\Weapon Frame\Cannon Set.cs" />
+    <Compile Include="Game Frame\Sky Frame\Weapon Frame\Gun Set.cs" />
+    <Compile Include="Game Frame\Sky Frame\Weapon Frame\Missile Launcher Set.cs" />
+    <Compile Include="Game Frame\Sky Frame\Weapon Frame\WeaponInfo.cs" />
+    <Compile Include="Game Frame\Sky Frame\Weapon Frame\Whirl Cannon.cs" />
+    <Compile Include="Game Frame\Sky Frame\Weapon Frame\Whirl Gun.cs" />
+    <Compile Include="Game Frame\Sky Frame\Weapon Frame\Strafe Cannon.cs" />
+    <Compile Include="Game Frame\Sky Frame\Weapon Frame\Strafe Gun.cs" />
+    <Compile Include="Game Frame\Sky Frame\Weapon Frame\Strafe Missile Launcher.cs" />
+    <Compile Include="Game Frame\Sky Frame\Weapon Frame\Whirl Missile Launcher.cs" />
+    <Compile Include="Memory Monitor.cs" />
+    <Compile Include="MyCollection.cs" />
+    <Compile Include="MyFont.cs" />
+    <Compile Include="MyGraphics.cs" />
+    <Compile Include="Sound.cs" />
+    <Compile Include="Types\DelayAction.cs" />
+    <Compile Include="Encoder.cs" />
+    <Compile Include="Game Frame\Sky Frame\Weapon Frame\Bullet.cs" />
+    <Compile Include="Game Frame\Sky Frame\Weapon Frame\Cannon.cs" />
+    <Compile Include="Game Frame\Sky Frame\Weapon Frame\CannonBall.cs" />
+    <Compile Include="Game Frame\Sky Frame\Weapon Frame\Gun.cs" />
+    <Compile Include="Game Frame\Sky Frame\Weapon Frame\GunBullet.cs" />
+    <Compile Include="Game Frame\Sky Frame\Mercury.cs" />
+    <Compile Include="Game Frame\Sky Frame\Weapon Frame\Missile Launcher.cs" />
+    <Compile Include="Game Frame\Sky Frame\Weapon Frame\Missile.cs" />
+    <Compile Include="Game Frame\Sky Frame\Weapon Frame\Missile Flame.cs" />
+    <Compile Include="Game Frame\Sky Frame\Sun Moon.cs" />
+    <Compile Include="Game Frame\Game Saver.cs" />
+    <Compile Include="Game Frame\Sky Frame\Sky.cs" />
+    <Compile Include="Game Frame\Station Frame\Maintenance Plant.cs" />
+    <Compile Include="Types\ImpactEffect.cs" />
+    <Compile Include="DelegateTypes.cs" />
+    <Compile Include="Game Frame\Station Frame\Grocery Store.cs" />
+    <Compile Include="Types\Planet.cs" />
+    <Compile Include="Static Methods\SIZEF.cs" />
+    <Compile Include="Game Frame\Statistics.cs" />
+    <Compile Include="Types\Pod Message.cs" />
+    <Compile Include="Types\BitmapBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Types\Clod.cs" />
+    <Compile Include="Static Methods\DIRECTIONS.cs" />
+    <Compile Include="Types\Effect.cs" />
+    <Compile Include="Types\Enums.cs" />
+    <Compile Include="Types\Explode.cs" />
+    <Compile Include="Static Methods\RANDOM.cs" />
+    <Compile Include="Static Methods\SIZE.cs" />
+    <Compile Include="Types\Fume.cs" />
+    <Compile Include="Types\Objects.cs" />
+    <Compile Include="Types\Scroll.cs" />
+    <Compile Include="Static Methods\FLOAT.cs" />
+    <Compile Include="Types\MyPicture.cs" />
+    <Compile Include="Static Methods\BYTE.cs" />
+    <Compile Include="Static Methods\COLOR.cs" />
+    <Compile Include="Default.cs" />
+    <Compile Include="Static Methods\DOUBLE.cs" />
+    <Compile Include="Game Frame\Background.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Game Frame\Block.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Game Frame\Game.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Game Frame\Gas Gauge.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Game Frame\Station Frame\Gas Station.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Game Frame\Health.cs" />
+    <Compile Include="Game Frame\Money.cs" />
+    <Compile Include="Game Frame\Station Frame\Ore Processing Zone.cs" />
+    <Compile Include="Game Frame\Pod Frame\Drill.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Game Frame\Pod Frame\Pod.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Game Frame\Pod Frame\Propel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Game Frame\Station Frame\Upgrade Plant.cs" />
+    <Compile Include="Static Methods\RECTANGLE.cs" />
+    <Compile Include="Game Frame\OreStorage.cs" />
+    <Compile Include="Game Frame\Things.cs" />
+    <Compile Include="Types\MyButton.cs" />
+    <Compile Include="Static Methods\CHAR.cs" />
+    <Compile Include="Static Methods\POINT.cs" />
+    <Compile Include="Public Variables.cs" />
+    <Compile Include="Static Methods\BITMAP.cs" />
+    <Compile Include="CONST.cs" />
+    <Compile Include="MyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm.Designer.cs">
+      <DependentUpon>MyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Static Methods\INT.cs" />
+    <Compile Include="Types\Station.cs" />
+    <Compile Include="Static Methods\STRING.cs" />
+    <Compile Include="Types\KeyEvent.cs" />
+    <Compile Include="Types\MouseEvent.cs" />
+    <Compile Include="Types\Normal Distribute.cs" />
+    <Compile Include="Types\PointD.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Static Methods\TABLELAYOUTPANEL.cs" />
+    <Compile Include="Types\TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Types\TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Types\UpgradeInfo.cs" />
+    <Compile Include="Game Frame\Sky Frame\Weapon Frame\Weapon.cs" />
+    <Compile Include="Types\Win8Message.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\Block\Coal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\Block\Copper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\Block\Crystal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\Block\Diamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\Block\Emerald.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\Block\Gold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\Block\Ground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\Block\Iron.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\Block\Jadeite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\Block\Rock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\Block\Ruby.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\Block\Sapphire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\Block\Silver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\Block\Soil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\Block\Sulfur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\Effects\Clod\0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\Effects\Clod\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\Effects\Clod\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\Effects\Clod\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\Effects\Clod\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\Effects\Clod\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\Station\Gas Station\Layout Settings.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\Station\Grocery Store\Layout Settings.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\Station\Maintenance Plant\Layout Settings.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\Station\Ore Processing Zone\Layout Settings.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\Station\Upgrade Plant\Layout Settings.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\GoodBye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoodByeInformation.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Shell32">
+      <Guid>{50A7E9B0-70EF-11D1-B75A-00A0C90564FE}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\Block\The Map.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
