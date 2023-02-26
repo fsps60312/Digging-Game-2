@@ -8,7 +8,6 @@ using Microsoft.DirectX.DirectSound;
 using System.IO;
 using System.Drawing;
 using System.Windows.Forms;
-using Microsoft.DirectX.AudioVideoPlayback;
 using NAudio;
 using NAudio.Wave;
 
