@@ -1,0 +1,586 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 12.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="12.0">
+ <Targets>
+  <Target Name="C:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2\bin\Debug\鑽礦遊戲2.exe">
+   <Modules>
+    <Module Name="鑽礦遊戲2.exe">
+     <Messages>
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="NonBreaking">
+       <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign '鑽礦遊戲2.exe' with a strong name key.</Issue>
+      </Message>
+     </Messages>
+     <Namespaces>
+      <Namespace Name="鑽礦遊戲2">
+       <Types>
+        <Type Name="Bitmap" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="Breaking">
+           <Issue Name="ProvideDisposeBool" Certainty="95" Level="Error">Provide an overridable implementation of Dispose(bool) on 'Bitmap' or mark the type as sealed. A call to Dispose(false) should only clean up native resources. A call to Dispose(true) should clean up both managed and native resources.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#Dispose()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="NonBreaking">
+             <Issue Name="NotCalled" Certainty="75" Level="CriticalWarning" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2\Static Methods" File="BITMAP.cs" Line="33">Change 'Bitmap.Dispose()' to call 'GC.SuppressFinalize(object)'. This will prevent derived types that introduce a finalizer from needing to re-implement 'IDisposable' to call it.</Issue>
+            </Message>
+            <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="Breaking">
+             <Issue Name="DisposeImplementation" Certainty="95" Level="Error" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2\Static Methods" File="BITMAP.cs" Line="33">Modify 'Bitmap.Dispose()' so that it calls Dispose(true), then calls GC.SuppressFinalize on the current object instance ('this' or 'Me' in Visual Basic), and then returns.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LockBits(System.Drawing.Rectangle,System.Drawing.Imaging.ImageLockMode,System.Drawing.Imaging.PixelFormat)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="flags" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterNoAlternate" Certainty="95" Level="Error" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2\Static Methods" File="BITMAP.cs" Line="29">In member 'Bitmap.LockBits(Rectangle, ImageLockMode, PixelFormat)', replace the term 'flags' in parameter name 'flags' with an appropriate alternate or remove it entirely.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Clod" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#InitialImage()" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="Breaking">
+             <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2\Types" File="Clod.cs" Line="54">'Clod.InitialImage()' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
+            </Message>
+            <Message Id="ptrbmp" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2\Types" File="Clod.cs" Line="54">Correct the spelling of the unrecognized token 'ptrbmp' in the literal '"ptr_bmp["'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Default" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#COLOR" Kind="Property" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Accessors>
+            <Accessor Name="#set_COLOR(System.Drawing.Color)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+             <Messages>
+              <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="Breaking">
+               <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2" File="Default.cs" Line="43">'Default.COLOR.set(Color)' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#FONT" Kind="Property" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Accessors>
+            <Accessor Name="#set_FONT(System.Drawing.Font)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+             <Messages>
+              <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="Breaking">
+               <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2" File="Default.cs" Line="31">'Default.FONT.set(Font)' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Dictionary`2" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Add(!0,!1)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="Breaking">
+             <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2" File="MyCollection.cs" Line="31">'Dictionary&lt;T_key, T_value&gt;.Add(T_key, T_value)' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Item[!0]" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#set_Item(!0,!1)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="Breaking">
+               <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2" File="MyCollection.cs" Line="49">'Dictionary&lt;T_key, T_value&gt;.this.set(T_key, T_value)' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Form1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#PBX" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Warning">Consider making 'Form1.PBX' non-public or a constant.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#THIS" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Warning">Consider making 'Form1.THIS' non-public or a constant.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Game_Saver" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#Load()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2\Game Frame" File="Game Saver.cs" Line="99">Object 'fs' can be disposed more than once in method 'Game_Saver.Load()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 99</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Save()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2\Game Frame" File="Game Saver.cs" Line="129">Object 'fs' can be disposed more than once in method 'Game_Saver.Save()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 129</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="HashSet`1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Add(!0)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="Breaking">
+             <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2" File="MyCollection.cs" Line="73">'HashSet&lt;T&gt;.Add(T)' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="List`1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Add(!0)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="Breaking">
+             <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2" File="MyCollection.cs" Line="202">'List&lt;T&gt;.Add(T)' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AddRange(System.Collections.Generic.IEnumerable`1&lt;!0&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="Breaking">
+             <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2" File="MyCollection.cs" Line="209">'List&lt;T&gt;.AddRange(IEnumerable&lt;T&gt;)' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="MemoryMonitor" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetValue()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="Breaking">
+             <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2" File="Memory Monitor.cs" Line="59">'MemoryMonitor.GetValue()' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Visible" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Warning">Consider making 'MemoryMonitor.Visible' non-public or a constant.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="MyCollection" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#DictionarySize" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Warning">Consider making 'MyCollection.DictionarySize' non-public or a constant.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#HashSetSize" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Warning">Consider making 'MyCollection.HashSetSize' non-public or a constant.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ListSize" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Warning">Consider making 'MyCollection.ListSize' non-public or a constant.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#QueueSize" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Warning">Consider making 'MyCollection.QueueSize' non-public or a constant.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#StackSize" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Warning">Consider making 'MyCollection.StackSize' non-public or a constant.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="MyPicture" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#DrawLOCKED(System.Drawing.Imaging.BitmapData)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2\Types" File="MyPicture.cs" Line="73">In method 'MyPicture.DrawLOCKED(BitmapData)', call System.IDisposable.Dispose on object 'font' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="OreStorage" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#Add(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="Volumn" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2\Game Frame" File="OreStorage.cs" Line="43">Correct the spelling of the unrecognized token 'Volumn' in the literal '"Volumn Limit Exceed!!!"'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Queue`1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Enqueue(!0)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="Breaking">
+             <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2" File="MyCollection.cs" Line="145">'Queue&lt;T&gt;.Enqueue(T)' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Sound" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#Begin(System.String,Microsoft.DirectX.DirectSound.BufferPlayFlags)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2" File="Sound.cs" Line="90">In method 'Sound.Begin(string, BufferPlayFlags)', call System.IDisposable.Dispose on object 'new MemoryStream(bs)' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Stack`1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Push(!0)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="Breaking">
+             <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2" File="MyCollection.cs" Line="110">'Stack&lt;T&gt;.Push(T)' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="string_Extensiosn" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#MaxFont(System.String,System.Drawing.Font&amp;,System.Int32,System.Int32,System.Double,System.Drawing.Font)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2\Static Methods" File="STRING.cs" Line="72">In method 'string_Extensiosn.MaxFont(this string, out Font, int, int, double, Font)', call System.IDisposable.Dispose on object 'font' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#MaxFont(System.String,System.Int32,System.Int32,System.Drawing.Font)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2\Static Methods" File="STRING.cs" Line="42">In method 'string_Extensiosn.MaxFont(this string, int, int, Font)', call System.IDisposable.Dispose on object 'font' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="鑽礦遊戲2.Game_Frame">
+       <Types>
+        <Type Name="Block" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#Generate_MAP(System.Int32)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="Breaking">
+             <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2\Game Frame" File="Block.cs" Line="287">'Block.Generate_MAP(int)' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Game" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#GarbageCollect()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.GC.Collect" TypeName="AvoidCallingProblematicMethods" Category="Microsoft.Reliability" CheckId="CA2001" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="NonBreaking">
+             <Issue Name="System.GC.Collect" Certainty="75" Level="Error" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2\Game Frame" File="Game.cs" Line="35">Remove the call to GC.Collect from 'Game.GarbageCollect()'. It is usually unnecessary to force garbage collection, and doing so can severely degrade performance.</Issue>
+             <Issue Name="System.GC.Collect" Certainty="75" Level="Error" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2\Game Frame" File="Game.cs" Line="37">Remove the call to GC.Collect from 'Game.GarbageCollect()'. It is usually unnecessary to force garbage collection, and doing so can severely degrade performance.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Process()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="Trememdous" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2\Game Frame" File="Game.cs" Line="204">Correct the spelling of the unrecognized token 'Trememdous' in the literal '"After Trememdous Pressure and Crustal Uplift, large amounts of DIAMONDs have bee..."'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="GasGauge" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#Get_Image(鑽礦遊戲2.Bitmap&amp;)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2\Game Frame" File="Gas Gauge.cs" Line="155">In method 'GasGauge.Get_Image(out Bitmap)', call System.IDisposable.Dispose on object 'bmp' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Grocery_Store_Type" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#LoadString(System.String,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="Breaking">
+             <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2\Game Frame\Station Frame" File="Grocery Store.cs" Line="107">'Grocery_Store_Type.LoadString(string, int)' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Money" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#VALUE" Kind="Property" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Accessors>
+            <Accessor Name="#set_VALUE(System.Int64)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+             <Messages>
+              <Message TypeName="InstantiateArgumentExceptionsCorrectly" Category="Microsoft.Usage" CheckId="CA2208" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="NonBreaking">
+               <Issue Name="IncorrectParameterName" Certainty="95" Level="CriticalError" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2\Game Frame" File="Money.cs" Line="33">Method 'Money.VALUE.set(long)' passes 'VALUE' as the 'paramName' argument to a 'ArgumentOutOfRangeException' constructor. Replace this argument with one of the method's parameter names. Note that the provided parameter name should have the exact casing as declared on the method.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Upgrade_Plant_Type" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="ProductDescription" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2\Game Frame\Station Frame" File="Upgrade Plant.cs" Line="92">Correct the spelling of the unrecognized token 'ProductDescription' in the literal '"ProductDescription"'.</Issue>
+            </Message>
+            <Message Id="ProductName" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2\Game Frame\Station Frame" File="Upgrade Plant.cs" Line="91">Correct the spelling of the unrecognized token 'ProductName' in the literal '"ProductName"'.</Issue>
+            </Message>
+            <Message Id="ProductPicture" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2\Game Frame\Station Frame" File="Upgrade Plant.cs" Line="90">Correct the spelling of the unrecognized token 'ProductPicture' in the literal '"ProductPicture"'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LoadString(System.String,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="Breaking">
+             <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2\Game Frame\Station Frame" File="Upgrade Plant.cs" Line="130">'Upgrade_Plant_Type.LoadString(string, int)' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="鑽礦遊戲2.Game_Frame.Pod_Frame">
+       <Types>
+        <Type Name="Pod" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#GetImage()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="InstantiateArgumentExceptionsCorrectly" Category="Microsoft.Usage" CheckId="CA2208" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="NonBreaking">
+             <Issue Name="IncorrectParameterName" Certainty="95" Level="CriticalError" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2\Game Frame\Pod Frame" File="Pod.cs" Line="418">Method 'Pod.GetImage()' passes 'd' as the 'paramName' argument to a 'ArgumentOutOfRangeException' constructor. Replace this argument with one of the method's parameter names. Note that the provided parameter name should have the exact casing as declared on the method.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Process(System.Double)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidExcessiveClassCoupling" Category="Microsoft.Maintainability" CheckId="CA1506" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="Breaking">
+             <Issue Name="Method" Certainty="75" Level="Warning" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2\Game Frame\Pod Frame" File="Pod.cs" Line="158">'Pod.Process(double)' is coupled with 32 different types from 9 different namespaces. Rewrite or refactor the method to decrease its class coupling, or consider moving the method to one of the other types it is tightly coupled with. A class coupling above 40 indicates poor maintainability, a class coupling between 40 and 30 indicates moderate maintainability, and a class coupling below 30 indicates good maintainability.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="鑽礦遊戲2.Game_Frame.Sky_Frame.Weapon_Frame">
+       <Types>
+        <Type Name="Weapon" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#Process()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="InstantiateArgumentExceptionsCorrectly" Category="Microsoft.Usage" CheckId="CA2208" Status="Active" Created="2016-01-03 14:26:35Z" FixCategory="NonBreaking">
+             <Issue Name="NoArguments" Certainty="95" Level="CriticalError" Path="c:\Users\ney\Desktop\C# Code\鑽礦遊戲2\鑽礦遊戲2\Game Frame\Sky Frame\Weapon Frame" File="Weapon.cs" Line="79">Call the 'ArgumentException' constructor that contains a message and/or paramName parameter.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+   <Name>Assemblies should have valid strong names</Name>
+   <Description>Either the assembly has no strong name, an invalid one, or the strong name is valid only because of the computer configuration. The assembly should not be deployed in this state. The most common causes of this are: 1) The assembly's contents were modified after it was signed. 2) The signing process failed. 3) The assembly was delay-signed. 4) A registry key existed that allowed the check to pass (where it would not have otherwise).</Description>
+   <Resolution Name="NoStrongName">Sign {0} with a strong name key.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182127.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidCallingProblematicMethods" Category="Microsoft.Reliability" CheckId="CA2001">
+   <Name>Avoid calling problematic methods</Name>
+   <Description>Avoid making unnecessary and potentially dangerous method calls.</Description>
+   <Resolution Name="System.GC.Collect">Remove the call to GC.Collect from {0}. It is usually unnecessary to force garbage collection, and doing so can severely degrade performance.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb385973.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Error</MessageLevel>
+   <File Name="reliabilityrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidExcessiveClassCoupling" Category="Microsoft.Maintainability" CheckId="CA1506">
+   <Name>Avoid excessive class coupling</Name>
+   <Description>Types and methods with a high degree of class coupling can be difficult to maintain.</Description>
+   <Resolution Name="Method">{0} is coupled with {1} different types from {2} different namespaces. Rewrite or refactor the method to decrease its class coupling, or consider moving the method to one of the other types it is tightly coupled with. A class coupling above {3} indicates poor maintainability, a class coupling between {3} and {4} indicates moderate maintainability, and a class coupling below {4} indicates good maintainability.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb397994.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Warning</MessageLevel>
+   <File Name="maintainabilityrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816">
+   <Name>Call GC.SuppressFinalize correctly</Name>
+   <Description>Call GC.SuppressFinalize to suppress finalization of your instance once Dispose has been called. Objects that implement IDisposable should call SuppressFinalize from the IDisposable.Dispose method to prevent the garbage collector from calling Object.Finalize on an object that does not require it.</Description>
+   <Resolution Name="NotCalled">Change {0} to call {1}. This will prevent derived types that introduce a finalizer from needing to re-implement 'IDisposable' to call it.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182269.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">CriticalWarning</MessageLevel>
+   <File Name="usagerules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000">
+   <Name>Dispose objects before losing scope</Name>
+   <Description>If a disposable object is not explicitly disposed before all references to it are out of scope, the object will be disposed at some indeterminate time when the garbage collector runs the finalizer of the object. Because an exceptional event might occur that will prevent the finalizer of the object from running, the object should be explicitly disposed instead.</Description>
+   <Resolution Name="NonExceptionEdge">In method {0}, call System.IDisposable.Dispose on object {1} before all references to it are out of scope.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182289.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202">
+   <Name>Do not dispose objects multiple times</Name>
+   <Description>A correctly implemented Dispose method can be called multiple times without throwing an exception. However, this is not guaranteed and to avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.</Description>
+   <Resolution Name="Default">Object {0} can be disposed more than once in method {1}. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 129</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182334.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201">
+   <Name>Do not raise reserved exception types</Name>
+   <Description>User code should not create and raise exceptions of certain types that are reserved by the runtime or which are of a too general exception type. Exception types that are too general include Exception, SystemException, and ApplicationException. Exception types that are reserved by the runtime include ThreadAbortException, OutOfMemoryException, ExecutionEngineException, and IndexOutOfRangeException.</Description>
+   <Resolution Name="TooGeneric">{0} creates an exception of type {1}, an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182338.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063">
+   <Name>Implement IDisposable correctly</Name>
+   <Description>All IDisposable types should implement the Dispose pattern correctly.</Description>
+   <Resolution Name="DisposeImplementation">Modify {0} so that it calls Dispose(true), then calls GC.SuppressFinalize on the current object instance ('this' or 'Me' in Visual Basic), and then returns.</Resolution>
+   <Resolution Name="ProvideDisposeBool">Provide an overridable implementation of Dispose(bool) on {0} or mark the type as sealed. A call to Dispose(false) should only clean up native resources. A call to Dispose(true) should clean up both managed and native resources.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms244737.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="InstantiateArgumentExceptionsCorrectly" Category="Microsoft.Usage" CheckId="CA2208">
+   <Name>Instantiate argument exceptions correctly</Name>
+   <Description>String arguments passed to constructors of ArgumentException and its derived types should be correct. Types derived from ArgumentException have inconsistent constructor overloads with respect to the message and paramName parameters as compared to ArgumentException.</Description>
+   <Resolution Name="IncorrectParameterName">Method {0} passes '{1}' as the {2} argument to a {3} constructor. Replace this argument with one of the method's parameter names. Note that the provided parameter name should have the exact casing as declared on the method.</Resolution>
+   <Resolution Name="NoArguments">Call the {0} constructor that contains a message and/or paramName parameter.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182347.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="usagerules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204">
+   <Name>Literals should be spelled correctly</Name>
+   <Description>This rule parses the literal string into words, tokenizing compound words, and checks the spelling of each word/token.</Description>
+   <Resolution Name="Default">Correct the spelling of the unrecognized token '{0}' in the literal '{1}'.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/bb264488.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211">
+   <Name>Non-constant fields should not be visible</Name>
+   <Description>Static fields should be constant unless you carefully manage access to the field using locks. Using static variables without making them thread safe can compromise execution state. This rule applies to managed code libraries. If the analyzed assembly is an application, it is usually safe to exclude violations of this rule.</Description>
+   <Resolution Name="Default">Consider making {0} non-public or a constant.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182353.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726">
+   <Name>Use preferred terms</Name>
+   <Description>Use preferred terms over deprecated alternates.</Description>
+   <Resolution Name="MemberParameterNoAlternate">In member {0}, replace the term '{1}' in parameter name {2} with an appropriate alternate or remove it entirely.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182258.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="12.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>
