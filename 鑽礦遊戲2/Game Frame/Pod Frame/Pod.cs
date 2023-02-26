@@ -237,6 +237,8 @@ namespace 鑽礦遊戲2.Game_Frame.Pod_Frame
         }
         static void RotatePod()
         {
+            if (TILT > Math.PI) TILT -= 2.0 * Math.PI;
+            if (TILT < -Math.PI) TILT += 2.0 * Math.PI;
             double pre_tilt = TILT;
             if (ON_GROUND)
             {

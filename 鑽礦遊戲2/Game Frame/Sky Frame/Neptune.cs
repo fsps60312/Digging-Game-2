@@ -17,7 +17,7 @@ namespace 鑽礦遊戲2.Game_Frame.Sky_Frame
     class Neptune:Planet
     {
         public Neptune()
-            : base("Neptune", 2.0, new Rectangle(0, -900, Block.Width, 100), 1750, 100000000000)
+            : base("Neptune", 2.0, new Rectangle(0, -900, Block.Width, 100), 500, 100000000000)
         {
             WeaponInfo info = new WeaponInfo();
             info.SetBase(this, 3.0);

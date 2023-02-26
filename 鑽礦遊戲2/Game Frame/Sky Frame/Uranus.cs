@@ -17,7 +17,7 @@ namespace 鑽礦遊戲2.Game_Frame.Sky_Frame
     class Uranus:Planet
     {
         public Uranus()
-            : base("Uranus", 2.0, new Rectangle(0, -800, Block.Width, 100), 1500.0, 20000000000)
+            : base("Uranus", 2.0, new Rectangle(0, -800, Block.Width, 100), 500.0, 20000000000)
         {
             WeaponInfo info = new WeaponInfo();
             info.SetBase(this, 3.0);

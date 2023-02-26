@@ -61,11 +61,7 @@ namespace 鑽礦遊戲2.Game_Frame
         }
         ~Block()
         {
-            try
-            {
-                BMP.UnlockBits(BMP_DATA);
-            }
-            catch (Exception) { }
+            BMP.UnlockBits(BMP_DATA);
         }
         #endregion
         #region Static Fields

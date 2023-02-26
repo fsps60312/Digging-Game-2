@@ -16,7 +16,7 @@ namespace 鑽礦遊戲2.Game_Frame.Sky_Frame
 {
     class Jupiter:Planet
     {
-        public Jupiter():base("Jupiter",2.0,new Rectangle(0, -600, Block.Width, 100), 1000.0, 1000000000)
+        public Jupiter():base("Jupiter",2.0,new Rectangle(0, -600, Block.Width, 100), 500.0, 1000000000)
         {
             WeaponInfo info = new WeaponInfo();
             info.SetBase(this, 3.5);

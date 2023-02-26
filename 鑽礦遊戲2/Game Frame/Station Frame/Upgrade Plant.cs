@@ -90,14 +90,20 @@ namespace 鑽礦遊戲2.Game_Frame
             CONTROLS.Add("ProductPicture", new MyPicture("ProductPicture", this, new Rectangle(150, 25, 300, 300), null, new Rectangle(150, 25, 300, 300)));
             CONTROLS.Add("ProductName", new MyPicture("ProductName", this, new Rectangle(450, 25, 225, 50), null, new Rectangle(450, 25, 225, 50)));
             CONTROLS.Add("ProductDescription", new MyPicture("ProductDescription", this, new Rectangle(450, 75, 225, 200), null, new Rectangle(450, 75, 225, 200)));
-            for (int i = 0; i < UpgradeInfo.UPGRADE_LIST.Length; i++)
             {
-                TabButton tab = new TabButton(i, IMAGES, UpgradeInfo.UPGRADE_LIST[i], this, new Rectangle(p, sz), TAB_REGION);
-                tab.Click += TAB_Click;
-                CONTROLS["←"].Click += tab.ARROW_Click;
-                CONTROLS["→"].Click += tab.ARROW_Click;
-                TAB.Add(tab);
-                p.Y += sz.Height;
+                int i = 0;
+                foreach (var ul in UpgradeInfo.UPGRADE_LIST)
+                {
+                    //MessageBox.Show("ddd");
+                    TabButton tab = new TabButton(i, IMAGES, ul, this, new Rectangle(p, sz), TAB_REGION);
+                    //MessageBox.Show("eee");
+                    tab.Click += TAB_Click;
+                    CONTROLS["←"].Click += tab.ARROW_Click;
+                    CONTROLS["→"].Click += tab.ARROW_Click;
+                    TAB.Add(tab);
+                    p.Y += sz.Height;
+                    i++;
+                }
             }
             CONTROLS["Exit"].Click += Button_Click;
             CONTROLS["↑"].Click += Button_Click;

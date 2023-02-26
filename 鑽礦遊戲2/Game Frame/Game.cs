@@ -33,14 +33,31 @@ namespace 鑽礦遊戲2.Game_Frame
         public static double FLUENCY = 1.0;
         public static void GarbageCollect()
         {
-            GC.Collect();
+            /*GC.Collect();
             GC.WaitForPendingFinalizers();
-            GC.Collect();
+            GC.Collect();*/
         }
-        static Bitmap bmp_Game_Start=new Bitmap(1,1);
+        //static Bitmap bmp_Game_Start=new Bitmap(1,1);
+        static void Do(Control ctrl,Action action)
+        {
+            if(ctrl.InvokeRequired)
+            {
+                MessageBox.Show("need to invoke");
+                var ir = ctrl.BeginInvoke(action);
+                ctrl.EndInvoke(ir);
+            }
+            else
+            {
+                action.Invoke();
+            }
+        }
         public static void Game_Start()
         {
             //System.Threading.Thread.CurrentThread.Priority = ThreadPriority.Highest;
+            //MyForm.AccessPBX = true;
+            //MyForm.PBX.Paint += PBX_Paint;
+            //MyForm.PBX.Invalidated += PBX_Invalidated;
+            //MessageBox.Show(MyForm.PBX.WaitOnLoad.ToString());
             DateTime garbagecollect = DateTime.Now;
             long memoryused = -1;
             int tick = 0;
@@ -67,13 +84,19 @@ namespace 鑽礦遊戲2.Game_Frame
                 FRAMED.Enqueue(DateTime.Now);
                 if (Game.ReadyToShow)
                 {
-                    Game.Get_Image(out bmp_Game_Start);
-                    MyForm.PBX.Image = bmp_Game_Start.GetDataBase();
-                    MyForm.CURSOR_CLIENT = MyForm.PBX.PointToClient(Cursor.Position);
-                    MyForm.PBX_SIZE = MyForm.PBX.Size;
+                    Bitmap bmp;
+                    Game.Get_Image(out bmp);
+                    MyForm.AccessTHIS = true;
+                    //if (MyForm.THIS.InvokeRequired) MessageBox.Show("need invoke");
+                    //MyForm.THIS.BackgroundImage.Dispose();
+                    MyForm.THIS.BackgroundImage = bmp.GetDataBase();
+                    MyForm.CURSOR_CLIENT = MyForm.THIS.PointToClient(Cursor.Position);
+                    MyForm.THIS.ResumeLayout();
+                    MyForm.AccessTHIS = false;
                     SHOWED.Enqueue(DateTime.Now);
                     StringBuilder msg = new StringBuilder();
                     FLUENCY = (double)SHOWED.Count / FRAMED.Count;
+                    msg.Append("Digging Game 2.2.14: ");
                     msg.Append("Fluency:");
                     msg.Append((FLUENCY * 100.0).ToString("F1").PadLeft(5));
                     msg.Append("%(");
@@ -95,7 +118,9 @@ namespace 鑽礦遊戲2.Game_Frame
                         msg.Append(Graphics.GetCounter());
                         msg.Append(", " + MemoryMonitor.ToString());
                     }
+                    MyForm.AccessTHIS = true;
                     MyForm.THIS.Text = msg.ToString();
+                    MyForm.AccessTHIS = false;
                 }
                 while (FRAMED.Count > 0 && FRAMED.ElementAt(0).AddSeconds(0.5) < DateTime.Now) FRAMED.Dequeue();
                 while (SHOWED.Count > 0 && SHOWED.ElementAt(0).AddSeconds(0.5) < DateTime.Now) SHOWED.Dequeue();
@@ -112,7 +137,18 @@ namespace 鑽礦遊戲2.Game_Frame
             GAME_OVER_STATE = GAME_OVER_EXPLODE_PERIOD;
             Win8Message.Add("Game Over : " + GAME_OVERED, Color.FromArgb(128, 128, 128, 128), 10.0);
         }
-        public static bool ReadyToShow { get { return PublicVariables.ProcessTime >= DateTime.Now; } }
+        public static bool ReadyToShow 
+        { 
+            get
+            {
+                /*if(MyForm.FORM_SIZE_CHANGED)
+                {
+                    MyForm.FORM_SIZE_CHANGED = false;
+                    return false;
+                }*/
+                return PublicVariables.ProcessTime >= DateTime.Now;
+            }
+        }
         public static bool TooEarlyToShow { get { return (PublicVariables.ProcessTime - DateTime.Now).TotalMilliseconds >= 100.0; } }
         public static void Initial_Components()
         {
