@@ -1,0 +1,52 @@
+Hello, I'm Burney, the creator of this game!
+If you like this game, please tell somebody else!
+Let me explane how to play this game :)
+
+Game Controls:
+Mouse: Used As a Mouse
+Up Arrow Key(or W): (In The Air / On The Ground)Speed Up Your Propel
+Up Arrow Key(or W): (In Any Store / Station)Exit Store / Station
+Down Arrow Key(or S): (In The Air)Slow Down Your Propel
+Down Arrow Key(or S): (On The Ground)Dig Down
+Down Arrow Key(or S): (In Any Store / Station)Exit Store / Station
+Left / Right Arrow Key(or A / D): (In The Air)Rotate Counterclockwise / Clockwise
+Left / Right Arrow Key(or A / D): (On The Ground)Dig or Move Left / Right
+Left / Right Arrow Key(or A / D): (In Any Store / Station)Exit Store / Station
+P: Pause or Resume Your Game
+Backspace: Save Your Game Immediately
+Esc: (In Any Store / Station)Exit Store / Station
+Ctrl: Digging Too Fast To Control? Press Ctrl To Let You Dig One Block a Time!
+Shift: Drop Down Too Slow? Press Shift To Speed Up The Game! But This Will Make All Keys Lose Its Effect.
+1: Use Small Dynamite
+2: Use Big Dynamite
+3: Use Barrel
+4: Use First Aid
+
+Game Rules:
+1. You'll trigger Self-destruction Procedure if you run out of fuel
+2. You'll explode if you get too much damage
+3. After you died, try open a notepad and press Ctrl+V
+4. You cannot dig up
+5. You cannot destroy the lawn(protect the Environment is our duty)
+6. The stores or stations won't charge or refund you if you buy something useless(Please think twice when shopping)
+7. You cannot save game if you are digging or fly too high
+8. The deeper, the higher possibilities you can find something rare
+9. Some updates need some requirements to unlock
+10. Be careful when flying
+11. You can turn your Pod as much rolls as you like, but it will turn itself back when release the keys
+12. Explosives cannot be used unless you park your Pod steady on the ground
+13. Barrels can refuel your Pod with fixed amount
+14. First Aid can fix your Pod
+15. Save your game will save anything, but be careful to use(?)(Don't worry, there's no bug)
+16. You'll get heavy rewards if you conquered something incredible(?)
+17. The map is very huge(But one of my friend dig it out......)
+18. Sky is not the limit(?!)
+19. I found there are too much things I want to tell you
+20. There are still many things I haven't concerned about so that......just play it and have fun~ :)
+
+Stores & Stations:
+Gas Station: Refueling
+Ore Processing Zone: Sell minerals to get money
+Upgrade Plant: Upgrade something to make you feel good(?)
+Grocery Store: Buy something useful(?)
+Maintenance Plant: Repairing

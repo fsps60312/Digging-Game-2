@@ -1,0 +1,64 @@
+﻿Picture\Station\Gas Station\
+[Labels]
+6
+Station Location
+Exterior
+Panel
+Load Images
+Images On Panel
+Buttons
+
+[Station Location]
+20
+
+[Exterior]
+Exterior.png
+
+[Panel]
+Panel.png
+
+[Load Images]
+6
+Empty Tank.png
+Empty Tank
+Full Tank.png
+Full Tank
+Your Budget.png
+Your Budget
+Fill Tank Cost.png
+Fill Tank Cost
+Number Monitor\Panel.png
+Number Panel
+Number Monitor\Numbers.png
+Numbers
+
+[Images On Panel]
+5
+Empty Tank
+(25,25)
+Your Budget
+(175,25)
+Number Panel
+(175,100)
+Fill Tank Cost
+(175,175)
+Number Panel
+(175,250)
+
+[Buttons]
+5
+$5
+(175,315)
+(160,50)
+$10
+(175,375)
+(160,50)
+$20
+(345,315)
+(160,50)
+Exit
+(345,375)
+(160,50)
+Fill\r\nTank
+(515,315)
+(160,110)

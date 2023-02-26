@@ -1,0 +1,54 @@
+﻿Picture\Station\Ore Processing Zone\
+[Labels]
+7
+Station Location
+Exterior
+Panel
+Load Images
+Images On Panel
+Buttons
+Fume Locations
+
+[Station Location]
+35
+
+[Exterior]
+Exterior.png
+
+[Panel]
+Panel.png
+
+[Load Images]
+2
+Layout Rectangle.png
+Layout Rectangle
+Today's Material Prices.png
+Caption
+
+[Images On Panel]
+2
+Caption
+(120,0)
+Layout Rectangle
+(50,60)
+
+[Buttons]
+4
+Pre
+(50,375)
+(100,50)
+Next
+(150,375)
+(100,50)
+Sell All
+(275,375)
+(175,50)
+Exit
+(475,375)
+(175,50)
+
+[Fume Locations]
+3
+(130,50)
+(182,30)
+(240,5)
