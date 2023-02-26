@@ -1,0 +1,9 @@
+wood
+cement
+steel
+copper
+plastic
+glass
+glass fiber
+carbon fiber
+bubble

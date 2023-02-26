@@ -1,0 +1,50 @@
+﻿Picture\Station\Grocery Store\
+[Labels]
+6
+Station Location
+Exterior
+Panel
+Load Images
+Images On Panel
+Buttons
+
+[Station Location]
+80
+
+[Exterior]
+Exterior.png
+
+[Panel]
+Panel.png
+
+[Load Images]
+6
+Layout Rectangle.png
+Layout Rectangle
+Items\Small Dynamic.png
+Small Dynamic
+Items\Big Dynamic.png
+Big Dynamic
+Items\Barrel.png
+Barrel
+Items\First Aid.png
+First Aid
+Items\Any Door.png
+Any Door
+
+[Images On Panel]
+1
+Layout Rectangle
+(50,60)
+
+[Buttons]
+3
+Page Up
+(50,375)
+(200,50)
+Page Down
+(250,375)
+(200,50)
+Exit
+(450,375)
+(200,50)

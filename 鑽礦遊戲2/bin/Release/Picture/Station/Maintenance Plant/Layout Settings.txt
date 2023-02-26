@@ -1,0 +1,47 @@
+﻿Picture\Station\Maintenance Plant\
+[Labels]
+6
+Station Location
+Exterior
+Panel
+Load Images
+Images On Panel
+Buttons
+
+[Station Location]
+50
+
+[Exterior]
+Exterior.png
+
+[Panel]
+Panel.png
+
+[Load Images]
+2
+Gear\Background.png
+GearB
+Gear\Outline.png
+GearO
+
+[Images On Panel]
+0
+
+[Buttons]
+5
+$25
+(450,25)
+(225,50)
+$50
+(450,100)
+(225,50)
+$100
+(450,175)
+(225,50)
+Full\r\nRepair
+(450,250)
+(225,100)
+Exit
+(450,375)
+(225,50)
+
