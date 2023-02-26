@@ -1,0 +1,82 @@
+***Strong recommend that new comers read this game instructions carefully first***
+Hello, I'm Burney, the creator of this game!
+If there is any suggestion, please let me know by sending to this email: fsps60312@yahoo.com.tw
+If you like this game, please tell somebody else!
+Let me explane how to play this game :)
+
+You can watch these introduction videos first (I'll make English versions while I'm free): https://www.youtube.com/watch?v=xTjyu5uaWmM&index=1&list=PL0srVz2dbivUrw6S1p2wr8o0wmh0V9EJc
+
+Save File Location:
+It's the "Save.sav"(except brackets) file in the main folder (This folder also contains files such as "ÆpÄq¹CÀ¸2.exe"¡B"Microsoft.DirectX.dll"¡B"Microsoft.DirectX.DirectSound.dll", etc.)
+If you want to keep several game progress, back up the save file
+
+Game Controls:
+Mouse Left Button: (In any store / station) Used as a mouse
+Mouse Right Button: (In the air / On the ground) Control your pod (You can try this if you are talented to control it, or your keyboard is broken...... This happened several times when my friends play it for hours)
+Up Arrow Key(or W): (In the air / On the ground) Speed up your propel
+Down Arrow Key(or S): (In the air) Slow down your propel
+Down Arrow Key(or S): (On the ground) Dig down
+Left / Right Arrow Key(or A / D): (In the air) Rotate counterclockwise / clockwise
+Left / Right Arrow Key(or A / D): (On the ground) Dig or move left / right
+Left / Right / Up / Down Arrow Key(or A / D / W / S): (In any store / Station) Exit store / station
+P: Pause or resume your game
+M: Disable or Enable sounds, when you enable sounds, it might take several minutes to let backgound music back
+Backspace: Save your game immediately, you can't save game when you're digging, flying to high, or dead.
+Esc: (In any store / Station) Exit store / station
+Ctrl: Digging too fast to control? Press Ctrl to let you dig one block a time!
+Shift / Q: Drop down too slow? Press shift to speed up the game for free! But during this other controls will be unavailable until release Shift Key.
+1 (not digit pad): Use Small Dynamite
+2 (not digit pad): Use Big Dynamite
+3 (not digit pad): Use Barrel
+4 (not digit pad): Use First Aid
+5 (not digit pad): Use Any Door
+N: Activate / Disactivate AI (Artificial Intelligence)
+O: Activate / Disactivate Memory Monitor
+
+Game Rules:
+1.	Eager to experience Windows 8.1? This game can meet your desires(?)
+2.	You'll trigger Self-destruction Procedure if you run out of fuel
+3.	You'll explode if you get too much damage
+4.	Please take attention to the messages on the up-right corner. Some may appear for just once and you will regret it forever if you miss one(?)
+5.	If unfortunately Game Over, don't be so sad. Enjoy my photo(?), then try open a notepad and press Ctrl+V
+6.	You cannot dig up
+7.	The clock(?) on the up-left corner is very useful
+8.	Always take a note of the value of the gas gauge on the top, this is that of your life and death
+9.	If you think you¡¦re skillful enough, you can find something to cover the HP meter on the top(?)
+10.	Please be aware of the state of storage on the up-right corner. If it¡¦s full, following minerals you get will all be discarded
+11.	You cannot destroy the lawn (protect the Environment is our duty), it's the only entrance to the stores or stations
+12.	The stores or stations won't charge or refund you if you buy something useless (Please think twice before purchasing)
+13.	You cannot save game if you are digging or flying too high (How can you get distracted in such urgent situation?)
+14.	The deeper, the harder soil
+15.	The more valuable minerals, the more difficult to dig
+16.	The deeper, the higher possibilities you can find something rare(?)
+17.	Some upgrades need some requirements to unlock (To see how to unlock, go to upgrade plant and click the locked equipment)
+18.	After some upgrades, you might regret. But don't worry, you can buy old equipments back at original prices
+19.	If you can't feel comfortable with so much money, you can repeatedly buy the same equipment over and over. Thus you can spend all your money without affecting anything else
+20.	Repairing is really expensive, so please be more careful when frying
+21.	If you felt it too slow to earn money, maybe you should concern about improve your skills
+22.	You can turn your Pod as much rolls as you like, but it will turn itself back the time you release the keys
+23.	Something is not recommend to dig(?)
+24.	Somewhere is not recommend to stay(?)
+25.	Something is not recommend to approach(?)
+26.	Always remember to save your game before try something new. What will happen next, who knows(?)
+27.	Explosives cannot be used unless you park your Pod steady on the ground(?)
+28.	Barrels can refuel your Pod with fixed amount(?)
+29.	First Aid can fix your Pod(?)
+30.	Save your game will save anything, but be careful to use(?)(Don't worry, there's NO bug)
+31.	Always keep this in mind: Saving is a good habit(?)
+32.	You'll get heavy rewards if you conquered something incredible(?)
+33.	The map is quite huge, but it's worthy of digging it out(?)
+34.	Sky is not the limit(?)
+35.	Don¡¦t try to think you can do anything underground(?)
+36.	Rules above may have exceptions(?)
+37.	There are still many things I haven't concerned about (Things I told you were FAR FROM HALF!) so that......just play it and have fun~ :)
+(My hands were getting sour~ >w<)
+
+Stores & Stations:(These are all on the ground level. Explorations might be required if you can't see them. Stop on the lawn to enter the stores or stations)
+Gas Station: Refueling
+Ore Processing Zone: Sell minerals to get money
+Maintenance Plant: Repairing
+Upgrade Plant: Upgrade something to make you feel good(?)
+Grocery Store: Buy something useful(?)
+(I were piffling, isn't I?)
