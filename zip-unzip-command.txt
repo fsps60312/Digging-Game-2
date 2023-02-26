@@ -1,0 +1,9 @@
+ref: https://www.maketecheasier.com/how-to-compress-and-split-files-in-ubuntu/
+install 7z: sudo apt install p7zip-full
+zip command: 7z -v25m a 鑽礦遊戲影片們.7z 鑽礦遊戲介紹影片1.wmv 鑽礦遊戲介紹影片2.wmv 鑽礦遊戲示範影片2-5.wmv
+unzip command: 7z e 鑽礦遊戲影片們.7z.001
+
+$ sha256sum *.wmv
+e5efe627efbe3df50d8382ac0069ef636b98f9733f11a87b525f923f01c79cb2  鑽礦遊戲介紹影片1.wmv
+f7526234e2fbd82e8a0c746878293df188f5f9a4d65fa3faa4543ae4307c9ea8  鑽礦遊戲介紹影片2.wmv
+f956fb224086c8db8afe08cbadcd814545aae98a759e789c9095d19c63700dec  鑽礦遊戲示範影片2-5.wmv
