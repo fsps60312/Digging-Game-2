@@ -16,7 +16,7 @@ namespace 鑽礦遊戲2.Game_Frame.Sky_Frame
 {
     class Saturn:Planet
     {
-        public Saturn():base("Saturn",2.0,new Rectangle(0, -700, Block.Width, 100),1250.0,5000000000)
+        public Saturn():base("Saturn",2.0,new Rectangle(0, -700, Block.Width, 100),500.0,5000000000)
         {
             WeaponInfo info = new WeaponInfo();
             info.SetBase(this, 3.5);

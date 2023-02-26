@@ -33,14 +33,24 @@ namespace 鑽礦遊戲2.Game_Frame
         public static double FLUENCY = 1.0;
         public static void GarbageCollect()
         {
-            GC.Collect();
+            /*GC.Collect();
             GC.WaitForPendingFinalizers();
-            GC.Collect();
+            GC.Collect();*/
         }
-        static Bitmap bmp_Game_Start=new Bitmap(1,1);
+        //static Bitmap bmp_Game_Start=new Bitmap(1,1);
+        static bool IS_IMAGE_FREE = true,IMAGE_READY=true;
+        static System.Drawing.Image PBXIMAGE = new System.Drawing.Bitmap(1, 1);
         public static void Game_Start()
         {
             //System.Threading.Thread.CurrentThread.Priority = ThreadPriority.Highest;
+            MyForm.THIS.ResizeBegin += THIS_ResizeBegin;
+            MyForm.THIS.ResizeEnd += THIS_ResizeEnd;
+            MyForm.THIS.Paint += THIS_Paint;
+            MyForm.THIS.Resize += THIS_Resize;
+            MyForm.PBX.Paint += PBX_Paint;
+            MyForm.PBX.Invalidated += PBX_Invalidated;
+            MyForm.PBX.LoadCompleted += PBX_LoadCompleted;
+            //MessageBox.Show(MyForm.PBX.WaitOnLoad.ToString());
             DateTime garbagecollect = DateTime.Now;
             long memoryused = -1;
             int tick = 0;
@@ -65,15 +75,35 @@ namespace 鑽礦遊戲2.Game_Frame
                     Application.DoEvents();
                 } while (TooEarlyToShow);
                 FRAMED.Enqueue(DateTime.Now);
-                if (Game.ReadyToShow)
+                if (Game.ReadyToShow&&IS_IMAGE_FREE)
                 {
-                    Game.Get_Image(out bmp_Game_Start);
-                    MyForm.PBX.Image = bmp_Game_Start.GetDataBase();
-                    MyForm.CURSOR_CLIENT = MyForm.PBX.PointToClient(Cursor.Position);
-                    MyForm.PBX_SIZE = MyForm.PBX.Size;
+                    Bitmap bmp;
+                    Game.Get_Image(out bmp);
+                    {
+                        //var ir=MyForm.PBX.BeginInvoke(new Action(() =>
+                        {
+                            //var pre_bmp = MyForm.PBX.Image;
+                            //var bbb=bmp.GetDataBase();
+                            //if(bbb==null)MessageBox.Show("error");
+                            //MyForm.PBX.Image.Dispose();
+                            //if ()
+                            {
+                                //IMAGE_READY = false;
+                                PBXIMAGE.Dispose();
+                                PBXIMAGE = bmp.GetDataBase();
+                                IMAGE_READY = true;
+                                MyForm.THIS.Refresh();
+                            }
+                            //if (pre_bmp != null) pre_bmp.Dispose();
+                            MyForm.CURSOR_CLIENT = MyForm.PBX.PointToClient(Cursor.Position);
+                            if (MyForm.PBX_SIZE != MyForm.PBX.Size) MyForm.PBX_SIZE = MyForm.PBX.Size;
+                        }//));
+                        //MyForm.PBX.EndInvoke(ir);
+                    }
                     SHOWED.Enqueue(DateTime.Now);
                     StringBuilder msg = new StringBuilder();
                     FLUENCY = (double)SHOWED.Count / FRAMED.Count;
+                    msg.Append("Digging Game 2.2.16: ");
                     msg.Append("Fluency:");
                     msg.Append((FLUENCY * 100.0).ToString("F1").PadLeft(5));
                     msg.Append("%(");
@@ -95,10 +125,65 @@ namespace 鑽礦遊戲2.Game_Frame
                         msg.Append(Graphics.GetCounter());
                         msg.Append(", " + MemoryMonitor.ToString());
                     }
-                    MyForm.THIS.Text = msg.ToString();
+                    {
+                        //var ir = MyForm.THIS.BeginInvoke(new Action(() => { 
+                            MyForm.THIS.Text = msg.ToString();
+                        //}));
+                        //MyForm.THIS.EndInvoke(ir);
+                    }
                 }
                 while (FRAMED.Count > 0 && FRAMED.ElementAt(0).AddSeconds(0.5) < DateTime.Now) FRAMED.Dequeue();
                 while (SHOWED.Count > 0 && SHOWED.ElementAt(0).AddSeconds(0.5) < DateTime.Now) SHOWED.Dequeue();
+            }
+        }
+
+        static void THIS_ResizeEnd(object sender, EventArgs e)
+        {
+            PublicVariables.ProcessTime += DateTime.Now - RESIZE_BEGIN_TIME;
+            PublicVariables.Reset_KeyPressed(false);
+        }
+
+        static DateTime RESIZE_BEGIN_TIME = DateTime.Now;
+        static void THIS_ResizeBegin(object sender, EventArgs e)
+        {
+            RESIZE_BEGIN_TIME = DateTime.Now;
+            //MyForm.PBX.Image = PBXIMAGE;
+        }
+
+        static void THIS_Resize(object sender, EventArgs e)
+        {
+        }
+
+        static void PBX_Invalidated(object sender, InvalidateEventArgs e)
+        {
+        }
+
+        static void THIS_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        static void PBX_LoadCompleted(object sender, AsyncCompletedEventArgs e)
+        {
+        }
+        static void PBX_Paint(object sender, PaintEventArgs e)
+        {
+            var pbx = sender as PictureBox;
+            //if (e.ClipRectangle != pbx.DisplayRectangle) return;
+            //var pre=pbx.Image;
+            if(IMAGE_READY)
+            {
+                //MessageBox.Show("a");
+                //if (pbx.InvokeRequired) MessageBox.Show("error pbx.InvokeRequired");
+                //pbx.Invoke(new Action(() =>
+                // {
+                //if (PBXIMAGE == null || pbx.Image == null) MessageBox.Show("error PBXIMAGE == null || pbx.Image == null");
+                IS_IMAGE_FREE = false;
+                //System.Drawing.Graphics g = System.Drawing.Graphics.FromImage(pbx.Image);
+                e.Graphics.DrawImage(PBXIMAGE, new Rectangle(0, 0, pbx.Width, pbx.Height), 0, 0, PBXIMAGE.Width, PBXIMAGE.Height, GraphicsUnit.Pixel);
+                //e.Graphics.Dispose();
+                IS_IMAGE_FREE = true;
+                IMAGE_READY = false;
+                //}));
             }
         }
         public static void Game_Over(string s)
@@ -112,7 +197,18 @@ namespace 鑽礦遊戲2.Game_Frame
             GAME_OVER_STATE = GAME_OVER_EXPLODE_PERIOD;
             Win8Message.Add("Game Over : " + GAME_OVERED, Color.FromArgb(128, 128, 128, 128), 10.0);
         }
-        public static bool ReadyToShow { get { return PublicVariables.ProcessTime >= DateTime.Now; } }
+        public static bool ReadyToShow 
+        { 
+            get
+            {
+                /*if(MyForm.FORM_SIZE_CHANGED)
+                {
+                    MyForm.FORM_SIZE_CHANGED = false;
+                    return false;
+                }*/
+                return PublicVariables.ProcessTime >= DateTime.Now;
+            }
+        }
         public static bool TooEarlyToShow { get { return (PublicVariables.ProcessTime - DateTime.Now).TotalMilliseconds >= 100.0; } }
         public static void Initial_Components()
         {

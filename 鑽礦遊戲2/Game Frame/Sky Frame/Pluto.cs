@@ -16,7 +16,7 @@ namespace 鑽礦遊戲2.Game_Frame.Sky_Frame
 {
     class Pluto:Planet
     {
-        public Pluto():base("Pluto",2.0, new Rectangle(0, -1500, Block.Width, 500), 2000, 1000000000000)
+        public Pluto():base("Pluto",2.0, new Rectangle(0, -1500, Block.Width, 500), 500, 1000000000000)
         {
             WeaponInfo info = new WeaponInfo();
             info.SetBase(this, double.MaxValue);

@@ -17,7 +17,7 @@ namespace 鑽礦遊戲2.Game_Frame.Sky_Frame
     class Earth : Planet
     {
         public Earth()
-            : base("Earth", 2.0, new Rectangle(0, -400, Block.Width, 100), 600.0, 50000000)
+            : base("Earth", 2.0, new Rectangle(0, -400, Block.Width, 100), 500.0, 50000000)
         {
             WeaponInfo info = new WeaponInfo();
             info.SetBase(this, 4.5);

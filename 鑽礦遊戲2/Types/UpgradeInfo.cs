@@ -35,6 +35,7 @@ namespace 鑽礦遊戲2
         #endregion
         public static string[] UPGRADE_LIST = new string[] { "Engine", "Drill", "Tank", "Shield", "Cargo","Blade","Swashplate"};
         static Dictionary<string, UpgradeInfo> MAIN_DATA = new Dictionary<string, UpgradeInfo>();
+
         public static UpgradeInfo Get(string str)
         {
             try

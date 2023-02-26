@@ -75,7 +75,7 @@ namespace 鑽礦遊戲2
             GasConsumed = double.Parse(data[idx++]);
             OresGet = int.Parse(data[idx++]);
             if (version <= 1) return;
-            MoneyCost = int.Parse(data[idx++]);
+            MoneyCost = long.Parse(data[idx++]);
             MovingDistance = double.Parse(data[idx++]);
             if (data.Length != 9) throw new ArgumentException("Statistic Data Damaged");
         }

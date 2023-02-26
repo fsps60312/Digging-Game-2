@@ -8,6 +8,7 @@ using Microsoft.DirectX.DirectSound;
 using System.IO;
 using System.Drawing;
 using System.Windows.Forms;
+//using Microsoft.DirectX.AudioVideoPlayback;
 using NAudio;
 using NAudio.Wave;
 
@@ -151,6 +152,11 @@ namespace 鑽礦遊戲2
                 BUFFER = new Dictionary<string, SecondaryBuffer>();
                 STREAM = new Dictionary<string, Stream>();
                 DirectoryInfo dir = new DirectoryInfo("Sound");
+                if (!dir.Exists)
+                {
+                    MessageBox.Show(dir.FullName + "\r\nDirectory not found");
+                    throw new Exception(dir.FullName + "\r\nDirectory not found");
+                }
                 foreach (FileInfo f in dir.GetFiles())
                 {
                     if (f.Extension != ".wav") continue;
@@ -170,6 +176,12 @@ namespace 鑽礦遊戲2
                 STREAM.Clear();
                 PlaySound = false;
             }
+            catch(Exception error)
+            {
+                MessageBox.Show(error.ToString());
+                throw error;
+            }
+            //MessageBox.Show("a");
             MyForm.THIS.Text = pretext;
         }
     }

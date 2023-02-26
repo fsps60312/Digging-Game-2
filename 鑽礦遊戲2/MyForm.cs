@@ -37,10 +37,12 @@ namespace 鑽礦遊戲2
         }
         void Form1_MouseDown(object sender, MouseEventArgs e)
         {
+            //MessageBox.Show("mouse down");
             PublicVariables.MOUSEEVENT.Enqueue(new MouseEvent(e, true));
         }
         void Form1_MouseUp(object sender, MouseEventArgs e)
         {
+            //MessageBox.Show("mouse up");
             PublicVariables.MOUSEEVENT.Enqueue(new MouseEvent(e, false));
         }
         void Form1_MouseWheel(object sender, MouseEventArgs e)
@@ -66,6 +68,7 @@ namespace 鑽礦遊戲2
             this.Size = new Size(766, 539);
             this.KeyDown += Form1_KeyDown;
             this.KeyUp += Form1_KeyUp;
+            //this.SizeChanged += MyForm_SizeChanged;
             this.Controls.Add(PBX);
             {
                 PBX.Dock = DockStyle.Fill;
@@ -100,6 +103,7 @@ namespace 鑽礦遊戲2
         }
         public MyForm()
         {
+            //this.DoubleBuffered = true;
             this.KeyPreview = true;
             MyForm.THIS = this;
             /*if (PublicVariables.TEST_MODE)

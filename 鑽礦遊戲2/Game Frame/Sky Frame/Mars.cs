@@ -17,7 +17,7 @@ namespace 鑽礦遊戲2.Game_Frame.Sky_Frame
     class Mars:Planet
     {
         public Mars()
-            : base("Mars", 2.0, new Rectangle(0, -500, Block.Width, 100), 750.0, 200000000)
+            : base("Mars", 2.0, new Rectangle(0, -500, Block.Width, 100), 500.0, 200000000)
         {
             WeaponInfo info = new WeaponInfo();
             info.SetBase(this, 4.0);

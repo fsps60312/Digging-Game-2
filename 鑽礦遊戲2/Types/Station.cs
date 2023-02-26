@@ -49,7 +49,9 @@ namespace 鑽礦遊戲2
             STATIONS = new List<Station>();
             STATIONS.Add(new Gas_Station_Type());
             STATIONS.Add(new Ore_Processing_Zone_Type());
+            //MessageBox.Show("aa");
             STATIONS.Add(new Upgrade_Plant_Type());
+            //MessageBox.Show("bb");
             STATIONS.Add(new Grocery_Store_Type());
             STATIONS.Add(new Maintenance_Plant_Type());
             FORMOPEN_BRIGHTNESS = 0.5;
